@@ -1,5 +1,5 @@
-#AddDefaultCharset utf-8
+AddDefaultCharset utf-8
 
-#RewriteEngine on
-#RewriteBase /
-#RewriteRule ^(.*)$ index.php
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.*)$ index.php
