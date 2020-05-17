@@ -2,7 +2,7 @@
 *(Test MVC project)*
 
  #### First commit:
- * edited <code>index.php</code>
- * added <code>.htaccess</code>
- * added <code>components/Router.php</code>
- * added <code>config/routes.php</code>
+ * :pencil2: edited <code>index.php</code>
+ * :heavy_plus_sign: added <code>.htaccess</code>
+ * :heavy_plus_sign: added <code>components/Router.php</code>
+ * :heavy_plus_sign: added <code>config/routes.php</code>
