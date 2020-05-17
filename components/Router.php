@@ -6,12 +6,12 @@ class Router
 
     public function __construct()
     {
-        $routesPath = ROOT.'/config/routes.php'; //route-ni joylashuvini aniqlash
-        $this->routes =  include($routesPath); //$routes ga uni tenglashtirish
+        $routesPath = ROOT.'/config/routes.php'; //route-ni joylashuvini aniqlash / location to route
+        $this->routes =  include($routesPath); //$routes ga uni tenglashtirish / equalization to $route
     }
 
     /**
-     * SO'ROV QATORINI QAYTARADI
+     * SO'ROV QATORINI QAYTARADI / RETURN THE REQUEST LINE
      */
     private function getURI()
     {
@@ -22,21 +22,21 @@ class Router
     }
 
     /**
-     * ROUTENI ISHGA TUSHIRADI
+     * ROUTENI ISHGA TUSHIRADI / RUN TO ROUTE
      */
     public function run()
     {
-        //so'rov qatorini olish
+        //so'rov qatorini olish / get the request string
         $uri = $this->getURI();
         
-        //kelgan so'rovni routes.php-dan tekshirish
+        //kelgan so'rovni routes.php-dan tekshirish / check the incoming request from routes.php
         //news              =>  news/index
-        //$this->routes     =   routes.php joylashgan joy
+        //$this->routes     =   routes.php joylashgan joy / where routes.php is located
         //$uriPattern       =   news
         //$path             =   news/index
         foreach ($this->routes as $uriPattern => $path) //news => news/index
         {
-            // $uriPattern va $path-ni taqqoslaymiz
+            // $uriPattern va $path-ni taqqoslaymiz / Let's compare $uriPattern and $path
             if (preg_match("~$uriPattern~", $uri))
             {
                 echo '+';
